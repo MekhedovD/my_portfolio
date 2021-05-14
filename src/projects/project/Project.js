@@ -5,7 +5,9 @@ const Project = (props) => {
 	return (
 		<div className={s.project}>
 			<div className={s.photo}><a href="#">photo</a></div>
-			<h3 className={s.title}>{props.title}</h3>
+			<h3 className={s.title}>
+				<a href={""}>{props.title}</a>
+			</h3>
 			<p className={s.description}>{props.description}</p>
 		</div>
 	);

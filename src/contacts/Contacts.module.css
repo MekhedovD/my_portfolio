@@ -1,6 +1,10 @@
 .contactsBlock {
-    min-height: 100vh;
-    background: #c5caff;
+    /*min-height: 100vh;*/
+    padding: 100px 0;
+    /*background: #c5caff;*/
+    background: #131414;
+    display: flex;
+    align-items: center;
 }
 
 .contactsContainer {
@@ -22,7 +26,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 300px;
+    width: 100%;
 }
 
 .input {

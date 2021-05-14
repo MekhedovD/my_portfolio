@@ -1,6 +1,10 @@
 .projectsBlock {
-    min-height: 100vh;
-    background: #ffe5f7;
+    /*min-height: 100vh;*/
+    padding: 100px 0;
+    /*background: #ffe5f7;*/
+    background: #131414;
+    display: flex;
+    align-items: center;
 }
 
 .projectsContainer {

@@ -1,6 +1,7 @@
 .footerBlock {
     padding: 50px;
-    background: #76ffa4;
+    /*background: #76ffa4;*/
+    background: #131414;
 }
 
 .footerContainer {
@@ -29,4 +30,13 @@
 
 .copyright {
     background: #fbffc2;
+}
+
+@media screen and (max-width: 477px) {
+    .footerContainer, .icons {
+        width: 100%;
+    }
+    .icons {
+        justify-content: space-around;
+    }
 }
