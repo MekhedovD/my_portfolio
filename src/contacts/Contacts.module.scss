@@ -1,0 +1,47 @@
+@import "../common/style/sass/variabless";
+@import "../common/style/sass/mixins";
+
+.contactsBlock {
+    /*min-height: 100vh;*/
+    padding: 100px 0;
+    /*background: #c5caff;*/
+    background: $bgFirstColor;
+    display: flex;
+    align-items: center;
+    .contactsContainer {
+        border: 1px solid;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        align-items: center;
+        align-content: space-between;
+        .form {
+            background: #ffe5f7;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            .input {
+                border: transparent;
+                margin-bottom: 10px;
+                padding: 0;
+                width: inherit;
+                height: 35px;
+            }
+            .textarea {
+                border: transparent;
+                resize: none;
+                overflow: hidden;
+                width: inherit;
+                height: 130px;
+                padding: 0;
+            }
+        }
+        .button {
+            border: none;
+            outline: none;
+            padding: 10px 50px;
+        }
+    }
+}

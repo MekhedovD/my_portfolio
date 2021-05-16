@@ -1,0 +1,36 @@
+@import "../common/style/sass/variabless";
+@import "../common/style/sass/mixins";
+
+.mainBlock {
+    /*min-height: 100vh;*/
+    padding: 100px 0;
+    /*background: #c5caff;*/
+    background: $bgFirstColor;
+    display: flex;
+    align-items: center;
+
+    .mainContainer {
+        border: 1px solid;
+        display: flex;
+        align-items: center;
+        /*justify-content: space-between;*/
+        justify-content: center;
+        flex-wrap: wrap;
+
+        .text {
+            width: 300px;
+            background: $bgThirdColor;
+        }
+
+        .photo {
+            width: 300px;
+            height: 400px;
+            background: $bgThirdColor;
+        }
+
+        @media screen and (min-width: 752px) {
+            /*justify-content: center;*/
+            justify-content: space-between;
+        }
+    }
+}

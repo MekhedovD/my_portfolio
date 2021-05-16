@@ -1,0 +1,15 @@
+@import "../common/style/sass/variabless";
+@import "../common/style/sass/mixins";
+
+.headerBlock {
+    height: 80px;
+    /*background: #76ffa4;*/
+    background: $bgFirstColor;
+
+    .headerContainer {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+}
+

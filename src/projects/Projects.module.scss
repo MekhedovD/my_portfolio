@@ -1,0 +1,27 @@
+@import "../common/style/sass/variabless";
+
+.projectsBlock {
+    /*min-height: 100vh;*/
+    padding: 100px 0;
+    /*background: #ffe5f7;*/
+    background: $bgFirstColor;
+    display: flex;
+    align-items: center;
+
+    .projectsContainer {
+        border: 1px solid;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .projects {
+            border: 1px solid;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+    }
+}
+
+
