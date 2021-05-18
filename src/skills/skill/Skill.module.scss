@@ -9,23 +9,9 @@
     align-items: center;
     text-align: center;
     padding: 40px 15px;
-    //&:nth-child(2) {
-    //    border-left: 1px solid #222;
-    //    border-right: 1px solid #222;
-    //}
-
-    .icon {
-        width: 60px;
-        height: 60px;
-        background: $bgThirdColor;
-        margin-bottom: 30px;
-    }
 
     h3 {
-        @include text($TitleFontFamily, 22px, 1.2);
-        font-weight: 600;
-        color: $titleColor;
-        margin: 0 0 15px;
+        color: $secondaryColor;
     }
 
     .description {

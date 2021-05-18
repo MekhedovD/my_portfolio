@@ -18,8 +18,27 @@
         flex-wrap: wrap;
 
         .text {
-            width: 300px;
-            background: $bgThirdColor;
+            width: 50%;
+
+            h1 {
+                @include text($TitleFontFamily, 36px, 1.2);
+                font-weight: 600;
+                color: $titleColor;
+                position: relative;
+                padding-bottom: 10px;
+                margin: 0 0 45px;
+
+                &:before {
+                    @include lineBefore("", 100%, 1px, $primaryColor, absolute, 0, 0)};
+
+                &:after {
+                    @include lineAfter("", 60px, 1px, $secondaryColor, absolute, 0, 0)};
+            }
+            p {
+                @include text($TitleFontFamily, 22px, 1.2);
+                font-weight: 600;
+                color: $titleColor;
+            }
         }
 
         .photo {
