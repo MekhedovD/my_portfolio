@@ -7,25 +7,8 @@ const Footer = () => {
 	return (
 		<div className={s.footerBlock}>
 			<div className={`${sContainer.container} ${s.footerContainer}`}>
-				<h3 className={s.title}>Mekhedov Dmitry</h3>
-
+				{/*<h3 className={s.title}>Mekhedov Dmitry</h3>*/}
 				<ContactsBlock />
-
-				{/*<div className={s.icons}>*/}
-
-				{/*<a href={""} className={s.icon}>*/}
-				{/*	<FontAwesomeIcon icon={faGithub} size={"2x"}/>*/}
-				{/*</a>*/}
-				{/*	<a href={""} className={s.icon}>*/}
-				{/*	<FontAwesomeIcon icon={faVk} size={"2x"}/>*/}
-				{/*</a>*/}
-				{/*	<a href={""} className={s.icon}>*/}
-				{/*	<FontAwesomeIcon icon={faInstagram} size={"2x"}/>*/}
-				{/*</a>*/}
-				{/*	<a href={""} className={s.icon}>*/}
-				{/*	<FontAwesomeIcon icon={faLinkedin} size={"2x"}/>*/}
-				{/*</a>*/}
-				{/*</div>*/}
 				<div>
 					<p className={s.copyright}>©copyriht Mekhedov Dmitry</p>
 				</div>

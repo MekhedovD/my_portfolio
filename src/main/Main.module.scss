@@ -2,8 +2,8 @@
 @import "../common/style/sass/mixins";
 
 .mainBlock {
-    /*min-height: 100vh;*/
-    padding: 100px 0;
+    //min-height: 100vh;
+    padding: 60px 0;
     /*background: #c5caff;*/
     background: $bgFirstColor;
     display: flex;
@@ -13,8 +13,8 @@
         border: 1px solid;
         display: flex;
         align-items: center;
-        /*justify-content: space-between;*/
-        justify-content: center;
+        justify-content: space-between;
+        //justify-content: center;
         flex-wrap: wrap;
 
         .text {
@@ -33,11 +33,16 @@
 
                 &:after {
                     @include lineAfter("", 60px, 1px, $secondaryColor, absolute, 0, 0)};
+
             }
             p {
                 @include text($TitleFontFamily, 22px, 1.2);
                 font-weight: 600;
                 color: $titleColor;
+            }
+
+            @media screen and (max-width: 752px) {
+                padding-bottom: 45px;
             }
         }
 
@@ -47,9 +52,12 @@
             background: $bgThirdColor;
         }
 
-        @media screen and (min-width: 752px) {
-            /*justify-content: center;*/
-            justify-content: space-between;
+        @media screen and (max-width: 752px) {
+            justify-content: center;
+            //justify-content: space-between;
         }
     }
+    //@media screen and (max-width: 477px) {
+    //   padding: 70px 0
+    //}
 }

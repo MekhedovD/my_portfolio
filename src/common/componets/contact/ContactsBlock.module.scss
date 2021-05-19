@@ -6,11 +6,12 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 20px;
 
   .icon {
     display: flex;
     align-items: center;
-    width: 22%;
+    //width: 22%;
     justify-content: space-around;
     color: $secondaryColor;
 
@@ -20,7 +21,6 @@
       border-left: 1px solid rgba(200, 200, 200, 0.4);
       h6 {
         @include text($TitleFontFamily, 16px, 1.2);
-        //letter-spacing: 1.2px;
         font-weight: 600;
         color: $textSecondaryColor;
         margin: 0;
@@ -30,17 +30,19 @@
         word-spacing: 1px;
         font-weight: 400;
         letter-spacing: 1.2px;
-        word-spacing: 1px;
         color: $textColor;
         margin: 0;
       }
     }
+    @media screen and (max-width: 477px) {
+      width: 65%;
+    }
   }
 
-  //@media screen and (max-width: 477px) {
-  //  justify-content: space-around;
-  //  width: 100%;
-  //}
+  @media screen and (max-width: 477px) {
+    flex-direction: column;
+    height: 190px;
+  }
 }
 
 
