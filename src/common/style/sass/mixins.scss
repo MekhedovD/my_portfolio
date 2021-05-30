@@ -8,7 +8,6 @@
 
 @mixin imgInCenter($bgSize, $bgPosition, $bgRepeat) {
   background-size: $bgSize;
-  //background-size: {};
   background-position: $bgPosition;
   background-repeat: $bgRepeat;
 }
