@@ -9,22 +9,20 @@
     align-items: center;
 
     .projectsContainer {
-        border: 1px solid;
         display: flex;
         flex-direction: column;
         align-items: center;
 
         .projects {
-            border: 1px solid;
             width: 100%;
             display: flex;
             justify-content: space-around;
             flex-wrap: wrap;
         }
     }
-    //@media screen and (max-width: 477px) {
-    //    padding: 70px 0;
-    //}
+    @media screen and (max-width: 477px) {
+        padding: 70px 0;
+    }
 }
 
 

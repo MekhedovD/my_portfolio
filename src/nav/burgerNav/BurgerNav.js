@@ -1,10 +1,10 @@
 import React from "react";
-import s from "./Nav.module.scss";
+import s from "./BurgerNav.module.scss";
 import { Link, animateScroll as scroll } from "react-scroll";
 
-const Nav = () => {
+const BurgerNav = () => {
 	return (
-		<div className={s.nav}>
+		<div className={s.burgerNav}>
 			{/*<a href="" className="hreft">Main</a>*/}
 			{/*<a href="" className="hreft">My skills</a>*/}
 			<Link
@@ -45,4 +45,4 @@ const Nav = () => {
 	);
 }
 
-export default Nav;
+export default BurgerNav;

@@ -5,6 +5,7 @@ import Project from "./project/Project";
 import Title from "../common/componets/title/Title";
 import todoImage from "../assets/image/todolist.png";
 import socialImage from "../assets/image/social.png";
+import Fade from 'react-reveal/Fade';
 
 const Projects = () => {
 
@@ -17,15 +18,28 @@ const Projects = () => {
 	};
 
 	return (
-		<div className={s.projectsBlock}>
-			<div className={`${sContainer.container} ${s.projectsContainer}`}>
-				<Title text={"Projects"} />
+		<div className={s.projectsBlock} id="projects">
+			<Fade>
+				<div className={`${sContainer.container} ${s.projectsContainer}`}>
+					<Title text={"Projects"} />
 					<div className={s.projects}>
-						<Project style={social} title={"Social network"} description={"Lorem ipsum dolor sit amet, consectetuer adipiscing elit ..."} />
-						<Project style={todolist} title={"Todo List"} description={"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor ..."} />
+						<Fade>
+							<Project
+								style={social}
+								title={"Social network"}
+								description={"Lorem ipsum dolor sit amet, consectetuer adipiscing elit ..."}
+							/>
+						</Fade>
+						<Fade>
+							<Project
+								style={todolist}
+								title={"Todo List"}
+								description={"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor ..."}
+							/>
+						</Fade>
 					</div>
-
-			</div>
+				</div>
+			</Fade>
 		</div>
 	);
 }
