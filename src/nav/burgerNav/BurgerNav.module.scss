@@ -9,19 +9,25 @@
     //flex-direction: column;
     //justify-content: space-around;
     //align-items: flex-end;
-    background: #cccccc;
+    //background: #cccccc;
     position: relative;
 
     .burgerNavItems {
-        //display: flex;
-        //flex-direction: column;
-        //justify-content: space-around;
-        //align-items: flex-end;
-        display: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-end;
+        //display: none;//
+        background: #cccccc;
+        width: 100%;
         position: absolute;
         top: 0;
-        right: 50px;
-        height: 100%;
+        //right: 50px;
+        right: 0;
+        height: 0;
+        padding: 20px;
+        transform: translate(0, -150px);
+        transition: 0.5s;
 
         a {
             @include text($TextFontFamily, 18px, .5);
@@ -39,11 +45,16 @@
         }
     }
     .show {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: flex-end;
-    }
+        //display: flex;
+        //flex-direction: column;
+        //justify-content: space-around;
+        //align-items: flex-end;
+        //height: 150px;//
+        //padding: 20px;
+        transform: translate(0, 0);
+        height: 150px;
+   }
+
     .burgerBtn {
         width: 30px;
         height: 30px;

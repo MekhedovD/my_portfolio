@@ -14,7 +14,7 @@ const BurgerNav = () => {
 		<div className={s.burgerNav}>
 			<div className={menuIsOpen ? `${s.burgerNavItems} ${s.show}` : s.burgerNavItems}>
 				<Link
-					activeClass={""}
+					activeClass={s.active}
 					to="main"
 					spy={true}
 					smooth={true}
@@ -30,7 +30,7 @@ const BurgerNav = () => {
 					duration={500}
 				>My skills</Link>
 				<Link
-					activeClass={""}
+					activeClass={s.active}
 					to="projects"
 					spy={true}
 					smooth={true}
@@ -38,7 +38,7 @@ const BurgerNav = () => {
 					duration={500}
 				>My projects</Link>
 				<Link
-					activeClass={""}
+					activeClass={s.active}
 					to="contacts"
 					spy={true}
 					smooth={true}
