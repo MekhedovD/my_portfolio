@@ -1,15 +1,23 @@
 import React, {useState} from "react";
 import s from "./BurgerNav.module.scss";
 import {Link} from "react-scroll";
+import Burger from "react-css-burger";
 
 const BurgerNav = () => {
-  const [menuIsOpen, setBergerMenu] = useState(false);
+
+	const [menuIsOpen, setBergerMenu] = useState(false);
 	const onBurgerBtnClick = () => {
-  	setBergerMenu(
+		setBergerMenu(
 		  !menuIsOpen
 	  );
 		console.log(menuIsOpen)
 	}
+
+	// const toggleButton = useCallback(
+	// 	() => setBergerMenu(prevState => !prevState),
+	// 	[],
+	// )
+
 	return (
 		<div className={s.burgerNav}>
 			<div className={menuIsOpen ? `${s.burgerNavItems} ${s.show}` : s.burgerNavItems}>
@@ -46,7 +54,23 @@ const BurgerNav = () => {
 					duration={500}
 				>My contacts</Link>
 			</div>
-			<div onClick={onBurgerBtnClick} className={s.burgerBtn}></div>
+			{/*<div onClick={onBurgerBtnClick} className={s.burgerBtn}></div>*/}
+			{/*<HamburgerArrow*/}
+			{/*	className={s.burgerBtn}*/}
+			{/*	{...{menuIsOpen, toggleButton}}*/}
+			{/*/>*/}
+			<div className={s.burgerBtn}>
+				<Burger
+					onClick={onBurgerBtnClick}
+					active={menuIsOpen}
+					burger="squeeze"
+					color="#C49B66"
+					hoverOpacity={0.8}
+					scale={1.2}
+					style={{marginTop: "10px", marginLeft: "10px"}}
+				/>
+			</div>
+
 		</div>
 	);
 }

@@ -4,12 +4,11 @@
 .headerBlock {
     height: 80px;
     background: $bgFirstColor;
-    //background: $bgSecondColor;
-    //background: red;
+    //background: $primaryColor;
     position: fixed;
     //top: 0;
     //left: 0;
-    //width: 100%;
+    width: 100%;
     z-index: 20;
 
     .headerContainer {

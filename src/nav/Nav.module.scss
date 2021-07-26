@@ -8,11 +8,21 @@
     width: 55%;
     display: flex;
     justify-content: space-between;
+
     a {
         @include text($TextFontFamily, 18px, .5);
         font-weight: 600;
         color: $titleColor;
+
+        &:hover {
+            text-decoration: underline;
+        }
     }
+
+    .active {
+        color: $linkColor;
+    }
+
     @media screen and (max-width: 832px){
         width: 100%;
     }
