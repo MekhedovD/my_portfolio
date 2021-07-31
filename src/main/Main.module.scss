@@ -3,19 +3,19 @@
 
 .mainBlock {
     //min-height: 100vh;
-    padding: 60px 0;
+    padding: 100px 0;
     background: $bgFirstColor;
     display: flex;
     align-items: center;
 
-    .particles {
-       position: absolute;
-       top: 0;
-        left: 0;
-       bottom: 0;
-       right: 0;
-        opacity: 0.3;
-    }
+    //.particles {
+    //    position: absolute;
+    //    top: 0;
+    //    left: 0;
+    //    bottom: 0;
+    //    right: 0;
+    //    opacity: 0.3;
+    //}
 
     .mainContainer {
         display: flex;
@@ -59,14 +59,14 @@
         .photo {
             width: 350px;
             height: 400px;
-            padding: 0 0 0 20px;
+            //padding: 0 0 0 20px;
             position: relative;
             -webkit-transition: all .4s;
             transition: all .4s;
-            &:hover {
-                padding: 0 20px 0 0;
-                 background: $secondaryColor;
-            }
+            //&:hover {
+            //    padding: 0 20px 0 0;
+                //background: $secondaryColor;
+            //}
             &::before {
                 position: absolute;
                 content: "";
@@ -77,6 +77,7 @@
                 left: 0;
             }
             &::after {
+                background: $primaryColor;
                 content: '';
                 position: absolute;
                 left: 15px;
@@ -86,6 +87,10 @@
                 z-index: -1;
                 -webkit-transition: all .5s;
                 transition: all .5s;
+            }
+            &:hover:after {
+                //background: $secondaryColor;
+                background-color: red;
             }
             .image {
                 width: 100%;
