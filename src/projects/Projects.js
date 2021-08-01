@@ -23,13 +23,13 @@ const Projects = () => {
 				<div className={`${sContainer.container} ${s.projectsContainer}`}>
 					<Title text={"Projects"} />
 					<div className={s.projects}>
-						<Fade>
+						{/*<Fade>*/}
 							<Project
 								style={social}
 								title={"Social network"}
 								description={"Lorem ipsum dolor sit amet, consectetuer adipiscing elit ..."}
 							/>
-						</Fade>
+						{/*</Fade>*/}
 						{/*<Fade>*/}
 							<Project
 								style={todolist}

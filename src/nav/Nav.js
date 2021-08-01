@@ -12,7 +12,7 @@ const Nav = () => {
 				to="main"
 				spy={true}
 				smooth={true}
-				offset={50}
+				offset={1}
 				duration={500}
 			>Main</Link>
 			<Link

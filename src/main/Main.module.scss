@@ -63,10 +63,11 @@
             position: relative;
             -webkit-transition: all .4s;
             transition: all .4s;
-            //&:hover {
-            //    padding: 0 20px 0 0;
-                //background: $secondaryColor;
-            //}
+            &:hover {
+                //padding: 0 0 0 20px;
+                transform: translate(10px, 10px);
+            }
+
             &::before {
                 position: absolute;
                 content: "";
@@ -90,7 +91,13 @@
             }
             &:hover:after {
                 //background: $secondaryColor;
-                background-color: red;
+                //background-color: red;
+                background: #C49B66;
+                //left: 5px;
+                //top: -15px;
+                //right: 15px;
+                //bottom: 15px;
+                transform: translateX(-30px);
             }
             .image {
                 width: 100%;
