@@ -2,9 +2,7 @@
 @import "../common/style/sass/mixins";
 
 .contactsBlock {
-    //min-height: 100vh;
     padding: 60px 0;
-    /*background: #c5caff;*/
     background: $bgFirstColor;
     display: flex;
     align-items: center;
@@ -16,7 +14,6 @@
         align-items: center;
         align-content: space-between;
         .form {
-            //background: #ffe5f7;
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;

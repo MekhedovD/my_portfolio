@@ -1,9 +1,7 @@
 @import "../common/style/sass/variabless";
 
 .projectsBlock {
-    //min-height: 100vh;
     padding: 60px 0;
-    /*background: #ffe5f7;*/
     background: $bgFirstColor;
     display: flex;
     align-items: center;
@@ -15,7 +13,6 @@
 
         .projects {
             width: 100%;
-            //width: 400px;
             display: flex;
             justify-content: space-around;
             flex-wrap: wrap;

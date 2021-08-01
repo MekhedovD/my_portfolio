@@ -4,10 +4,7 @@
 .headerBlock {
     height: 80px;
     background: $bgFirstColor;
-    //background: $primaryColor;
     position: fixed;
-    //top: 0;
-    //left: 0;
     width: 100%;
     z-index: 20;
 
@@ -15,10 +12,6 @@
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        //width: 100%;
-        //position: fixed;
-
-
     }
     @media screen and (max-width: 752px) {
         height: 110px;

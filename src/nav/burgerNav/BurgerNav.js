@@ -13,11 +13,6 @@ const BurgerNav = () => {
 		console.log(menuIsOpen)
 	}
 
-	// const toggleButton = useCallback(
-	// 	() => setBergerMenu(prevState => !prevState),
-	// 	[],
-	// )
-
 	return (
 		<div className={s.burgerNav}>
 			<div className={menuIsOpen ? `${s.burgerNavItems} ${s.show}` : s.burgerNavItems}>
@@ -54,11 +49,6 @@ const BurgerNav = () => {
 					duration={500}
 				>My contacts</Link>
 			</div>
-			{/*<div onClick={onBurgerBtnClick} className={s.burgerBtn}></div>*/}
-			{/*<HamburgerArrow*/}
-			{/*	className={s.burgerBtn}*/}
-			{/*	{...{menuIsOpen, toggleButton}}*/}
-			{/*/>*/}
 			<div className={s.burgerBtn}>
 				<Burger
 					onClick={onBurgerBtnClick}
@@ -70,7 +60,6 @@ const BurgerNav = () => {
 					style={{marginTop: "10px", marginLeft: "10px"}}
 				/>
 			</div>
-
 		</div>
 	);
 }

@@ -4,9 +4,7 @@
 .project {
     width: 400px;
     background: $bgSecondColor;
-    /*position: relative;*/
     .photo {
-        //width: 400px;
         width: 100%;
         height: 300px;
         background-color: $bgThirdColor;
@@ -87,7 +85,6 @@
             }
         }
     }
-
 }
 
 
