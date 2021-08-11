@@ -21,6 +21,9 @@
             left: 0;
         }
     }
+    @media screen and (max-width: 477px) {
+        width: 100%;
+    }
 
     .projectLink {
         position: relative;
