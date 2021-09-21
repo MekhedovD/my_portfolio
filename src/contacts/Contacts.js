@@ -31,8 +31,9 @@ const Contacts = () => {
 		}),
 		onSubmit: values => {
 			alert(JSON.stringify(values));
-			axios.post('http://localhost:3010/sendMessage', values)
+			axios.post('https://gmail-smpt-server.herokuapp.com/sendMessage', values)
 			.then(() => {
+				alert("your message send mail")
 				setPassedModal(true)
 			})
 			formik.resetForm()
@@ -75,6 +76,7 @@ const Contacts = () => {
 							type={"submit"}
 							value={"Send message"}
 							className={s.button}
+							// onClick={onSubmit}
 						>Send message
 						</button>
 					</form>
