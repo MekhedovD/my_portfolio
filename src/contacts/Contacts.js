@@ -30,7 +30,7 @@ const Contacts = () => {
 			.required('Message is required'),
 		}),
 		onSubmit: values => {
-			alert(JSON.stringify(values));
+			// alert(JSON.stringify(values));
 			axios.post('https://gmail-smpt-server.herokuapp.com/sendMessage', values)
 			.then(() => {
 				alert("your message send mail")
