@@ -39,6 +39,9 @@ const Contacts = () => {
 				alert("your message send mail")
 				// setPassedModal(true) //!!!!
 			})
+			.catch(() => {
+				alert("message did not go")
+			})
 			formik.resetForm()
 		},
 	})
