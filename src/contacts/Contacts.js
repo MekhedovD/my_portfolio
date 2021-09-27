@@ -10,7 +10,7 @@ import axios from "axios";
 
 const Contacts = () => {
 
-	const [passedModal, setPassedModal] = useState(false)
+	// const [passedModal, setPassedModal] = useState(false)
 	// const [failedModal, setFailedModal] = useState(false)
 
 	const formik = useFormik({
@@ -30,11 +30,14 @@ const Contacts = () => {
 			.required('Message is required'),
 		}),
 		onSubmit: values => {
-			// alert(JSON.stringify(values));
-			axios.post('https://gmail-smpt-server.herokuapp.com/sendMessage', values)
+			axios.post('https://gmail-smpt-server.herokuapp.com/sendMessage', {
+				name: values.name,
+				email: values.email,
+				message: values.message
+			})
 			.then(() => {
 				alert("your message send mail")
-				setPassedModal(true)
+				// setPassedModal(true) //!!!!
 			})
 			formik.resetForm()
 		},
