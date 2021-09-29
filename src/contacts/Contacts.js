@@ -60,7 +60,7 @@ const Contacts = () => {
 						<input
 							className={s.input}
 							type="text"
-							placeholder={"Your name"}
+							placeholder={"Your name!"}
 							// placeholder={{...formik.touched && formik.errors.name ? formik.errors.name : 'Your Name'}}
 							{...formik.getFieldProps("name")}
 							//{...formik.touched.name && formik.errors.name
