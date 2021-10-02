@@ -25,7 +25,7 @@
         color: $textSecondaryColor;
         margin: 0;
       }
-      p {
+      p, a {
         @include text($TextFontFamily, 15px, 1.6);
         word-spacing: 1px;
         font-weight: 400;

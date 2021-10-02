@@ -25,6 +25,10 @@
         .text {
             width: 50%;
 
+            @media screen and (max-width: 752px) {
+                width: 70%;
+            }
+
             h1 {
                 @include text($TitleFontFamily, 36px, 1.2);
                 font-weight: 600;
@@ -47,6 +51,7 @@
                 @include text($TitleFontFamily, 22px, 1.2);
                 font-weight: 600;
                 color: $titleColor;
+                padding: 20px 0;
             }
 
             @media screen and (max-width: 752px) {

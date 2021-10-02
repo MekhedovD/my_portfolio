@@ -30,6 +30,13 @@ const Main = () => {
 							text={"Frontend developer"}
 						/></p>
 						<SocialBlock/>
+						{/*<div>*/}
+							<p>
+								I`m frontend developer. Last years i was attending the frontend courses IT-incubator.
+								There i got acquanted proggramming langaules such as JS snd TS,
+								also with popular libraries of React, Redux.
+							</p>
+						{/*</div>*/}
 					</div>
 					<div className={s.photo}>
 						<div className={s.image}></div>

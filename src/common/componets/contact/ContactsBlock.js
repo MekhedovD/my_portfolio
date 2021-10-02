@@ -11,14 +11,14 @@ const ContactsBlock = () => {
 				<FontAwesomeIcon icon={faPhone} size={"2x"} />
 				<div className={s.contact}>
 					<h6>Phone</h6>
-					<p>+375 33 3786584</p>
+					<a href="tel:+375333786584">+375 33 3786584</a>
 				</div>
 			</div>
 			<div className={s.icon}>
 				<FontAwesomeIcon icon={faEnvelope} size={"2x"} />
 				<div className={s.contact}>
 					<h6>Email</h6>
-					<p>mekhedov.d@mail.ru</p>
+					<a href="mailto:mekhedov.d@mail.ru" target="_blank" rel="noopener noreferrer">mekhedov.d@mail.ru</a>
 				</div>
 			</div>
 			<div className={s.icon}>
@@ -33,3 +33,9 @@ const ContactsBlock = () => {
 }
 
 export default ContactsBlock;
+
+
+
+
+// frontend developer. i improve m yskills and expand them new tehnologies. i have experience i creating spa , using React, redux, html css.my free time is dedicated to programming tuttorials. i looking for is time job and open to new opportunitcs
+// фронтенд-разработчик. Я улучшаю свои навыки и расширяю их новыми технологиями. У меня есть опыт создания спа, используя React, redux, html css. Мое свободное время посвящено руководствам по программированию. Я ищу работу вовремя и открыт для новых возможностей
