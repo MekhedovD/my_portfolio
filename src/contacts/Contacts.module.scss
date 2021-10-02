@@ -1,0 +1,66 @@
+@import "../common/style/sass/variabless";
+@import "../common/style/sass/mixins";
+
+.contactsBlock {
+    padding: 60px 0;
+    background: $bgFirstColor;
+    display: flex;
+    align-items: center;
+    .contactsContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        align-items: center;
+        align-content: space-between;
+        .form {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 96%;
+
+            .input {
+                width: 48%;
+                color: $subTitle;
+                @include blockForm();
+                @include text($TextFontFamily, 1rem, 1.3);
+                @media screen and (max-width: 752px) {
+                    width: 100%;
+                }
+            }
+
+            .textarea {
+                color: $subTitle;
+                @include blockForm();
+                @include text($TextFontFamily, 1rem, 1.3);
+                resize: none;
+                overflow: hidden;
+                width: 100%;
+                height: 160px;
+            }
+        }
+
+        .button {
+            border: none;
+            outline: none;
+            @include text($TextFontFamily, 12, 40px);
+            width: 160px;
+            text-transform: uppercase;
+            letter-spacing: .5px;
+            font-weight: 700;
+            height: 40px;
+            background: #C49B66;
+            color: #fff;
+            margin: 0 auto;
+
+            &:hover {
+                background: rgba(77%, 61%, 40%, 0.8);
+                transition: all, 0.3s, ease-in-out 0.3s;
+            }
+        }
+    }
+    @media screen and (max-width: 477px) {
+        padding: 70px 0;
+    }
+}
+

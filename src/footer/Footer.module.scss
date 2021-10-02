@@ -1,0 +1,28 @@
+@import "../common/style/sass/variabless";
+@import "../common/style/sass/mixins";
+
+.footerBlock {
+  padding: 20px 50px;
+  background: #131414;
+
+  .footerContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    .copyright {
+      @include text($TextFontFamily, 13px, 1.6);
+      font-weight: 400;
+      word-spacing: 1px;
+      color: $textColor;
+    }
+
+    @media screen and (max-width: 477px) {
+      width: 100%;
+    }
+  }
+  @media screen and (max-width: 477px) {
+    padding: 25px;
+  }
+}
