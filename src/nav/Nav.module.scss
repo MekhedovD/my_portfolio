@@ -1,0 +1,33 @@
+@import "../common/style/sass/variabless";
+@import "../common/style/sass/mixins";
+
+
+.nav {
+    width: 55%;
+    display: flex;
+    justify-content: space-between;
+
+    a {
+        @include text($TextFontFamily, 18px, .5);
+        font-weight: 600;
+        color: $titleColor;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .active {
+        color: $linkColor;
+    }
+
+    @media screen and (max-width: 832px){
+        width: 100%;
+    }
+    @media screen and (max-width: 400px) {
+        justify-content: space-around;
+        align-items: flex-end;
+        width: 100%;
+        display: none;
+    }
+}

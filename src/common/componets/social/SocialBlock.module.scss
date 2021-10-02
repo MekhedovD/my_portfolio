@@ -1,0 +1,33 @@
+@import "../../style/sass/variabless";
+@import "../../style/sass/mixins";
+
+
+.icons {
+    width: 35%;
+    display: flex;
+    justify-content: space-between;
+
+    .icon {
+        color: $titleColor;
+        border: 1px solid $titleColor;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover {
+            background: #C49B66;
+            border-color: #C49B66;
+            transition: all, 0.3s, ease-in-out 0.3s;
+        }
+    }
+
+    @media screen and (max-width: 477px) {
+        justify-content: space-around;
+        width: 100%;
+    }
+}
+
+
+
+
