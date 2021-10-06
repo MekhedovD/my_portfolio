@@ -27,8 +27,17 @@
     //}
 
     @media screen and (max-width: 477px) {
-      width: 100%;
+      display: grid;
+      grid-template-rows: repeat(3, 1fr);
+      grid-template-columns: none;
+      width: 80%;
+      height: 230px;
+      margin-bottom: 20px;
     }
+
+    //@media screen and (max-width: 477px) {
+    //  width: 100%;
+    //}
   }
 
   .copyright {
