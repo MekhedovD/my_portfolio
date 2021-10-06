@@ -1,36 +1,50 @@
 import React from "react";
 import s from "./ContactsBlock.module.scss";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faMapMarkerAlt, faPhone} from "@fortawesome/free-solid-svg-icons";
-import {faEnvelope} from "@fortawesome/free-regular-svg-icons";
+// import {faMapMarkerAlt, faPhone} from "@fortawesome/free-solid-svg-icons";
+// import {faEnvelope} from "@fortawesome/free-regular-svg-icons";
 
-const ContactsBlock = () => {
+const ContactsBlock = ({icon, title, data, link}) => {
 	return (
-		<div className={s.icons}>
+		// <div className={s.icons}>
 			<div className={s.icon}>
-				<FontAwesomeIcon icon={faPhone} size={"2x"} />
+				<FontAwesomeIcon icon={icon} size={"2x"} />
 				<div className={s.contact}>
-					<h6>Phone</h6>
-					<a href="tel:+375333786584">+375 33 3786584</a>
+					<h6>{title}</h6>
+					<a href={link}>{data}</a>
 				</div>
 			</div>
-			<div className={s.icon}>
-				<FontAwesomeIcon icon={faEnvelope} size={"2x"} />
-				<div className={s.contact}>
-					<h6>Email</h6>
-					<a href="mailto:mekhedov.d@mail.ru" target="_blank" rel="noopener noreferrer">mekhedov.d@mail.ru</a>
-				</div>
-			</div>
-			<div className={s.icon}>
-				<FontAwesomeIcon icon={faMapMarkerAlt} size={"2x"} />
-				<div className={s.contact}>
-					<h6>Address</h6>
-					<p>Minsk, Belarus</p>
-				</div>
-			</div>
-		</div>
+		// </div>
 	)
 }
+
+// const ContactsBlock = () => {
+// 	return (
+// 		<div className={s.icons}>
+// 			<div className={s.icon}>
+// 				<FontAwesomeIcon icon={faPhone} size={"2x"} />
+// 				<div className={s.contact}>
+// 					<h6>Phone</h6>
+// 					<a href="tel:+375333786584">+375 33 3786584</a>
+// 				</div>
+// 			</div>
+// 			<div className={s.icon}>
+// 				<FontAwesomeIcon icon={faEnvelope} size={"2x"} />
+// 				<div className={s.contact}>
+// 					<h6>Email</h6>
+// 					<a href="mailto:mekhedov.d@mail.ru" target="_blank" rel="noopener noreferrer">mekhedov.d@mail.ru</a>
+// 				</div>
+// 			</div>
+// 			<div className={s.icon}>
+// 				<FontAwesomeIcon icon={faMapMarkerAlt} size={"2x"} />
+// 				<div className={s.contact}>
+// 					<h6>Address</h6>
+// 					<p>Minsk, Belarus</p>
+// 				</div>
+// 			</div>
+// 		</div>
+// 	)
+// }
 
 export default ContactsBlock;
 
