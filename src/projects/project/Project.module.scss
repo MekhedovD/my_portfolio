@@ -51,7 +51,7 @@
         .title {
             margin: 0 0 15px;
 
-            a {
+            p {
                 @include text($TitleFontFamily, 22px, 1.2);
                 font-weight: 700;
                 color: $subTitle;

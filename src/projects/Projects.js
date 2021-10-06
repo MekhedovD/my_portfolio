@@ -9,31 +9,34 @@ import Fade from 'react-reveal/Fade';
 
 const Projects = () => {
 
-	const social = {
-		backgroundImage: `url(${socialImage})`
-	};
-
-	const todolist = {
-		backgroundImage: `url(${todoImage})`
-	};
+	const projects = [
+		{
+			title: "Social network",
+			img: socialImage,
+			link: "https://github.com/MekhedovD/02networkReakt_TS"
+		},
+		{
+			title: "Todo List",
+			img: todoImage,
+			link: "https://github.com/MekhedovD/toDoList"
+		},
+]
 
 	return (
 		<div className={s.projectsBlock} id="projects">
 			<Fade>
 				<div className={`${sContainer.container} ${s.projectsContainer}`}>
-					<Title text={"Projects"} />
+					<Title text={"Projects"}/>
 					<div className={s.projects}>
 						<Fade>
-							<Project
-								style={social}
-								title={"Social network"}
-							/>
-						</Fade>
-						<Fade>
-							<Project
-								style={todolist}
-								title={"Todo List"}
-							/>
+							{
+								projects.map(p => <Project
+									key={p.link}
+									img={p.img}
+									title={p.title}
+									link={p.link}
+								/>)
+							}
 						</Fade>
 					</div>
 				</div>
