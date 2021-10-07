@@ -3,13 +3,13 @@ import s from './SendMessageModal.module.scss';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 
-export const SendMessageModal = ({icon, title, text, setActiveModal, activeModal}) => {
+export const SendMessageModal = ({icon, title, text, setActiveModal, activeModal, styleIcon}) => {
 
 	const onClickHandler = () => setActiveModal(false)
 	const onClickStopPropagation = e => e.stopPropagation()
 
 	return (
-		<div className={s.modalContainer}>
+		<div className={`${s.modalContainer}`}>
 			<div className={`${activeModal ? `${s.modal} ${s.modalActive}` : s.modal}`} onClick={onClickHandler}>
 				<div className={`${activeModal ? `${s.modalContent} ${s.activeContent}` : s.modalContent}`}
 				     onClick={onClickStopPropagation}>

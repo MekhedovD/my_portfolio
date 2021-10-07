@@ -38,15 +38,12 @@ const Contacts = () => {
 				message: values.message
 			})
 			.then(() => {
-				alert("your message send mail")
+				// alert("your message send mail")
 				setPassedModal(true)
 			})
 			.catch(() => {
-				alert("message did not go")
+				// alert("message did not go")
 				setFailedModal(true)
-			})
-			.finally(() => {
-				alert("fack")
 			})
 			formik.resetForm()
 		},
@@ -55,8 +52,7 @@ const Contacts = () => {
 
 	return (
 		<>
-			{/*{req && <WaveLoading style={{position: 'fixed', right: '50%', top: '50%'}} color={'#ffffff'}/>}*/}
-			<div className={s.sendMessageModal}>
+			<div className={`${s.sendMessageModal}`}>
 				<SendMessageModal
 					icon={passedModal ? faCheck : failedModal ? faTimes : null}
 					title={passedModal ? 'Your message was sent.' : failedModal ? 'Your message was not sent.' : null}
@@ -79,10 +75,8 @@ const Contacts = () => {
 							<input
 								className={s.input}
 								type="text"
-								// placeholder={"Your name"}
 								id='name'
 								placeholder={formik.touched && formik.errors.name ? formik.errors.name : 'Your Name'}
-								// placeholder={formik.touched.name && formik.errors.name ? formik.errors.name : 'Your Name'}
 								{...formik.getFieldProps("name")}
 							/>
 							{/*{formik.touched.name && formik.errors.name*/}
@@ -90,13 +84,11 @@ const Contacts = () => {
 							<input
 								className={s.input}
 								type="text"
-								// placeholder={"Your email"}
 								id='email'
 								placeholder={formik.touched.email && formik.errors.email ? formik.errors.email : 'example@gmail.com'}
 								{...formik.getFieldProps("email")}
 							/>
 							<textarea
-								// placeholder={"Your message"}
 								id='message'
 								placeholder={formik.touched.message && formik.errors.message ? formik.errors.message : 'Your message'}
 								className={s.textarea}
@@ -107,7 +99,6 @@ const Contacts = () => {
 								type={"submit"}
 								value={"Send message"}
 								className={s.button}
-								// onClick={onSubmit}
 							>Send message
 							</button>
 						</form>

@@ -1,11 +1,9 @@
-//@import './../../../../common/styles/sass/variables';
-//@import './../../../../common/styles/sass/mixins';
+@import "../../common/style/sass/variabless";
 
 .modalContainer {
   justify-content: flex-start;
   flex-direction: column;
   text-align: center;
-  //@include container();
   box-sizing: border-box;
 
   .modal {
@@ -15,7 +13,12 @@
     position: fixed;
     top: 0;
     left: 0;
-    //@include flexable(center, center, row);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
     opacity: 0;
     transition: 0.5s;
     pointer-events: none;
@@ -23,20 +26,21 @@
 
 
     .modalContent {
-      //background-color: $backgroundColor;
-      background-color: red;
+      background-color: $bgThirdColor;
       transform: scale(0.5);
       transition: 0.4s all;
-      //@include flexable(center, center, row);
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+
 
       .header {
-        //color: $textColorH3;
-        color: #c18888;
-        //background-color: $backgroundColor;
-        background-color: red;
+        color: $bgSecondColor;
+        background-color: $bgThirdColor;
         padding: 28px 40px 25px;
-        //border: 1px solid $backgroundColor;
-        border: 1px solid red;
+        border: 1px solid $bgThirdColor;
 
         h4 {
           font-size: 22px;
@@ -46,6 +50,7 @@
 
           .icon {
             margin-right: 14px;
+            color: red;
           }
         }
       }
