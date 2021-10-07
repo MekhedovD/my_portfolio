@@ -8,16 +8,16 @@ const SocialBlock = () => {
 	return (
 		<div className={s.icons}>
 
-			<a href={""} className={s.icon}>
+			<a href={"#"} className={s.icon}>
 				<FontAwesomeIcon icon={faGithub} />
 			</a>
-			<a href={""} className={s.icon}>
+			<a href={"#"} className={s.icon}>
 				<FontAwesomeIcon icon={faVk} />
 			</a>
-			<a href={""} className={s.icon}>
+			<a href={"#"} className={s.icon}>
 				<FontAwesomeIcon icon={faInstagram} />
 			</a>
-			<a href={""} className={s.icon}>
+			<a href={"#"} className={s.icon}>
 				<FontAwesomeIcon icon={faLinkedin} />
 			</a>
 		</div>

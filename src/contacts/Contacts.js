@@ -8,12 +8,15 @@ import * as Yup from "yup";
 import axios from "axios";
 import {SendMessageModal} from "./Modal/SendMessageModal";
 import {faCheck, faTimes} from "@fortawesome/free-solid-svg-icons";
+// import ReactLoading from 'react-loading';
+import { CommonLoading } from 'react-loadingg';
 
 
 const Contacts = () => {
 
 	const [passedModal, setPassedModal] = useState(false)
 	const [failedModal, setFailedModal] = useState(false)
+	const [req, setReq] = useState(false)
 
 	const formik = useFormik({
 		initialValues: {
@@ -32,6 +35,7 @@ const Contacts = () => {
 			.required('Message is required'),
 		}),
 		onSubmit: values => {
+			setReq(true)
 			axios.post('https://gmail-smpt-server.herokuapp.com/sendMessage', {
 				name: values.name,
 				email: values.email,
@@ -45,6 +49,9 @@ const Contacts = () => {
 				// alert("message did not go")
 				setFailedModal(true)
 			})
+			.finally(() => {
+				setReq(false)
+			})
 			formik.resetForm()
 		},
 	})
@@ -52,6 +59,7 @@ const Contacts = () => {
 
 	return (
 		<>
+			{req && <CommonLoading color={"#fff"} style={{position: "fixed", right: "50%", top: "50%"}}/>}
 			<div className={`${s.sendMessageModal}`}>
 				<SendMessageModal
 					icon={passedModal ? faCheck : failedModal ? faTimes : null}

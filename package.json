@@ -26,6 +26,8 @@
     "react-animated-burgers": "^1.2.8",
     "react-css-burger": "^0.2.0",
     "react-dom": "^17.0.1",
+    "react-loading": "^2.0.3",
+    "react-loadingg": "^1.7.2",
     "react-particles-js": "^3.4.0",
     "react-reveal": "^1.2.2",
     "react-scripts": "4.0.3",
@@ -43,7 +45,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-    "eslintConfig": {
+  "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest"
