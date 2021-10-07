@@ -1,6 +1,10 @@
 @import "../common/style/sass/variabless";
 @import "../common/style/sass/mixins";
 
+.sendMessageModal {
+    position: absolute;
+}
+
 .contactsBlock {
     padding: 60px 0;
     background: $bgFirstColor;
