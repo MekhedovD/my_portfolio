@@ -3,23 +3,19 @@ import s from "./SocialBlock.module.scss";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faGithub, faInstagram, faLinkedin, faVk} from "@fortawesome/free-brands-svg-icons";
 
+const dataBlock = [
+	{icon: faGithub, a: "https://github.com/MekhedovD"},
+	{icon: faVk, a: ""},
+	{icon: faInstagram, a: ""},
+	{icon: faLinkedin, a: ""}
+]
 
 const SocialBlock = () => {
 	return (
 		<div className={s.icons}>
-
-			<a href={"#"} className={s.icon}>
-				<FontAwesomeIcon icon={faGithub} />
-			</a>
-			<a href={"#"} className={s.icon}>
-				<FontAwesomeIcon icon={faVk} />
-			</a>
-			<a href={"#"} className={s.icon}>
-				<FontAwesomeIcon icon={faInstagram} />
-			</a>
-			<a href={"#"} className={s.icon}>
-				<FontAwesomeIcon icon={faLinkedin} />
-			</a>
+			{dataBlock.map(d => <a href={d.a} target="_blank"  rel="noreferrer" className={s.icon}>
+				<FontAwesomeIcon icon={d.icon} />
+			</a>)}
 		</div>
 	)
 }

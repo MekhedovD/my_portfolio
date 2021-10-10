@@ -3,7 +3,6 @@
 
 
 .title {
-    /*background: #fbffc2;*/
     margin-bottom: 80px;
     position: relative;
     z-index: 2;
@@ -21,9 +20,6 @@
         font-weight: 600;
         color: $titleColor;
     }
-    //@media screen and (max-width: 752px) {
-    //    margin-bottom: 50px;
-    //}
 }
 
 

@@ -11,7 +11,7 @@ const Project = ({img, link, title}) => {
 					<p>{title}</p>
 				</h3>
 				<div className={s.info}>
-					<span className={s.by}><a href="#">By : admin</a></span>
+					<span className={s.by}><a href="https://mekhedovd.github.io/my_portfolio/" target="_blank"  rel="noreferrer">By : admin</a></span>
 				</div>
 			</div>
 		</div>

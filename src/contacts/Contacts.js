@@ -2,14 +2,13 @@ import React, {useState} from "react";
 import s from "./Contacts.module.scss";
 import sContainer from "../common/style/Container.module.css"
 import Title from "../common/componets/title/Title";
-import Fade from 'react-reveal/Fade';
+import Fade from "react-reveal/Fade";
 import {useFormik} from "formik";
 import * as Yup from "yup";
 import axios from "axios";
 import {SendMessageModal} from "./Modal/SendMessageModal";
 import {faCheck, faTimes} from "@fortawesome/free-solid-svg-icons";
-// import ReactLoading from 'react-loading';
-import { CommonLoading } from 'react-loadingg';
+import { CommonLoading } from "react-loadingg";
 
 
 const Contacts = () => {
@@ -20,27 +19,30 @@ const Contacts = () => {
 
 	const formik = useFormik({
 		initialValues: {
-			name: '',
-			email: '',
-			message: '',
+			name: "",
+			email: "",
+			message: "",
 		},
 		validationSchema: Yup.object({
 			name: Yup.string()
-			.max(20, 'Must be 20 characters or less')
-			.required('Name is required'),
+			.max(20, "Must be 20 characters or less")
+			.required("Name is required"),
 			email: Yup.string()
-			.email('Invalid email address')
-			.required('Email is required'),
+			.email("Invalid email address")
+			.required("Email is required"),
 			message: Yup.string()
-			.required('Message is required'),
+			.required("Message is required"),
 		}),
 		onSubmit: values => {
 			setReq(true)
-			axios.post('https://gmail-smpt-server.herokuapp.com/sendMessage', {
-				name: values.name,
-				email: values.email,
-				message: values.message
+			axios.post("https://gmail-smpt-server.herokuapp.com/sendMessage", {
+				values
 			})
+			// axios.post("https://gmail-smpt-server.herokuapp.com/sendMessage", {
+			// 	name: values.name,
+			// 	email: values.email,
+			// 	message: values.message
+			// })
 			.then(() => {
 				// alert("your message send mail")
 				setPassedModal(true)
@@ -59,12 +61,12 @@ const Contacts = () => {
 
 	return (
 		<>
-			{req && <CommonLoading color={"#fff"} style={{position: "fixed", right: "50%", top: "50%"}}/>}
+			{req &&<CommonLoading color={"#fff"} style={{position: "fixed", right: "50%", top: "50%"}}/>}
 			<div className={`${s.sendMessageModal}`}>
 				<SendMessageModal
 					icon={passedModal ? faCheck : failedModal ? faTimes : null}
-					title={passedModal ? 'Your message was sent.' : failedModal ? 'Your message was not sent.' : null}
-					text={passedModal ? 'Thank you.' : failedModal ? 'Try again later.' : null}
+					title={passedModal ? "Your message was sent." : failedModal ? "Your message was not sent." : null}
+					text={passedModal ? "Thank you." : failedModal ? "Try again later." : null}
 					setActiveModal={passedModal ? setPassedModal : failedModal ? setFailedModal : null}
 					activeModal={passedModal || failedModal}
 				/>
@@ -83,8 +85,8 @@ const Contacts = () => {
 							<input
 								className={s.input}
 								type="text"
-								id='name'
-								placeholder={formik.touched && formik.errors.name ? formik.errors.name : 'Your Name'}
+								id="name"
+								placeholder={formik.touched && formik.errors.name ? formik.errors.name : "Your Name"}
 								{...formik.getFieldProps("name")}
 							/>
 							{/*{formik.touched.name && formik.errors.name*/}
@@ -92,13 +94,13 @@ const Contacts = () => {
 							<input
 								className={s.input}
 								type="text"
-								id='email'
-								placeholder={formik.touched.email && formik.errors.email ? formik.errors.email : 'example@gmail.com'}
+								id="email"
+								placeholder={formik.touched.email && formik.errors.email ? formik.errors.email : "example@gmail.com"}
 								{...formik.getFieldProps("email")}
 							/>
 							<textarea
-								id='message'
-								placeholder={formik.touched.message && formik.errors.message ? formik.errors.message : 'Your message'}
+								id="message"
+								placeholder={formik.touched.message && formik.errors.message ? formik.errors.message : "Your message"}
 								className={s.textarea}
 								{...formik.getFieldProps("message")}
 							>

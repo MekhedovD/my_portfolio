@@ -28,6 +28,7 @@ const Projects = () => {
 				<div className={`${sContainer.container} ${s.projectsContainer}`}>
 					<Title text={"Projects"}/>
 					<div className={s.projects}>
+
 						<Fade>
 							{
 								projects.map(p => <Project
@@ -38,6 +39,7 @@ const Projects = () => {
 								/>)
 							}
 						</Fade>
+
 					</div>
 				</div>
 			</Fade>

@@ -1,9 +1,9 @@
-import React from 'react'
-import s from './SendMessageModal.module.scss';
+import React from "react"
+import s from "./SendMessageModal.module.scss";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 
-export const SendMessageModal = ({icon, title, text, setActiveModal, activeModal, styleIcon}) => {
+export const SendMessageModal = ({icon, title, text, setActiveModal, activeModal}) => {
 
 	const onClickHandler = () => setActiveModal(false)
 	const onClickStopPropagation = e => e.stopPropagation()

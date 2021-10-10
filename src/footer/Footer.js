@@ -2,7 +2,7 @@ import React from "react";
 import s from "./Footer.module.scss";
 import sContainer from "../common/style/Container.module.css"
 import ContactsBlock from "../common/componets/contact/ContactsBlock";
-import Fade from 'react-reveal/Fade';
+import Fade from "react-reveal/Fade";
 import {faMapMarkerAlt, faPhone} from "@fortawesome/free-solid-svg-icons";
 import {faEnvelope} from "@fortawesome/free-regular-svg-icons";
 
@@ -48,15 +48,6 @@ const Footer = () => {
 					</div>
 				</div>
 			</Fade>
-
-			{/*<Fade>*/}
-			{/*	<div className={`${sContainer.container} ${s.footerContainer}`}>*/}
-			{/*		<ContactsBlock/>*/}
-			{/*		<div>*/}
-			{/*			<p className={s.copyright}>©copyriht Mekhedov Dmitry</p>*/}
-			{/*		</div>*/}
-			{/*	</div>*/}
-			{/*</Fade>*/}
 
 		</div>
 	);
